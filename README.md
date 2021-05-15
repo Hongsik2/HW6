@@ -43,7 +43,7 @@
 - 근사해를 OPT', 최적해를 OPT 라고 한다.
 - OPT' <= 2*OPT 이다. (근사해는 최적해의 2배를 넘지 않는다.)
 
-![근사비율(PPT 참고)]()
+![근사비율(PPT 참고)](https://user-images.githubusercontent.com/80087069/118380820-d80e7680-b61f-11eb-9853-5f9a7d93204d.png)
 
 #### 실제 실행 결과
 
