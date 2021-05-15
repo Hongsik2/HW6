@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class JobShcheduling {
+public class JobScheduling {
 
     public static int Bruteforce(int[] t, int m) {
         int[] s = new int[t.length];                //s[i] = i번째 작업이 들어가게 되는 기계의 번호를 저장한 배열
@@ -30,7 +30,7 @@ public class JobShcheduling {
 
 
             s[0]++;
-            for (int j = 0; j < t.length; j++) {
+            for (int j = 0; j < t.length; j++) {    //작업이 기계에 들어가는 번호 변경
                 if (s[j] > m - 1) {
                     s[j] = 0;
                     if (j + 1 < t.length) {
@@ -41,7 +41,7 @@ public class JobShcheduling {
         }
 
         int endTime = Integer.MAX_VALUE;
-        for (int i = 0; i < count; i++) {
+        for (int i = 0; i < count; i++) {           //모든 경우의 수에서의 실행 값 중 가장 작은 값 반환
             if (endTimeset[i] < endTime) {
                 endTime = endTimeset[i];
             }
@@ -86,27 +86,23 @@ public class JobShcheduling {
         int q;                      //작업의 개수
 
         Scanner scanner = new Scanner(System.in);
-        System.out.printf("작업의 개수를 입력하세요 : ");
+        System.out.print("작업의 개수를 입력하세요 : ");
         q = scanner.nextInt();
 
         int m = 2;                  //기계의 개수 : 2
 
         Random random = new Random();
 
-        int[] t = new int[q];       //각 작업의 수행 시간
+        int[] t = new int[q];       //각 작업의 수행 시간을 저장한 배열
 
         for (int i = 0; i < q; i++) {
             t[i] = random.nextInt(9) + 1;
         }
-        System.out.println();
 
-
-        int approxEndtime = JobShcheduling.ApproxJobscheduling(t, m);
-        int bruteEndtime = JobShcheduling.Bruteforce(t, m);
+        int approxEndtime = JobScheduling.ApproxJobscheduling(t, m);
+        int bruteEndtime = JobScheduling.Bruteforce(t, m);
 
         System.out.printf("근사화 작업 스케줄링 : %d \n", approxEndtime);
         System.out.printf("전수조사 작업 스케줄링 : %d", bruteEndtime);
-
-
     }
 }

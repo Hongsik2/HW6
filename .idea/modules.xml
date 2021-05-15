@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/HW6.iml" filepath="$PROJECT_DIR$/.idea/HW6.iml" />
-      <module fileurl="file://$PROJECT_DIR$/JobScheduling/JobScheduling.iml" filepath="$PROJECT_DIR$/JobScheduling/JobScheduling.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Jobscheduling/Jobscheduling.iml" filepath="$PROJECT_DIR$/Jobscheduling/Jobscheduling.iml" />
     </modules>
   </component>
 </project>
